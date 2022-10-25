@@ -1,0 +1,25 @@
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.product-item {
+  padding: 1rem;
+}
+
+.product-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pricing-section {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+#color-circle {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+}
