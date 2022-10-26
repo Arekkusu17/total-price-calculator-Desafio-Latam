@@ -1,21 +1,38 @@
-const price = document.querySelector("#price").textContent;
+const price = document.querySelector("#price");
 const quantity = document.querySelector("#quantity");
 const button = document.querySelector("#button");
-const chosenColor = document.querySelector("#chosenColor");
 const total = document.querySelector("#totalPrice");
 const totalQty = document.querySelector("#quantityToBuy");
 const circle = document.querySelector("#color-circle");
 
 button.addEventListener("click", () => {
-  total.textContent = formatPrice(parseInt(price) * parseInt(quantity.value));
+  let color = select.value;
+  circle.style.backgroundColor = color;
+  total.textContent = formatPrice(parseInt(price.textContent) * parseInt(quantity.value));
   totalQty.textContent = quantity.value;
-  circle.style.display = "inline-block";
-  circle.style.backgroundColor = chosenColor.value;
-  console.log(price, quantity.value, chosenColor.value);
+});
+
+//the product has a different price deppending on the color chosen
+const select = document.querySelector("#selectColor");
+select.addEventListener("change", () => {
+  switch (select.value) {
+    case "red":
+      price.textContent = "399990";
+      break;
+    case "black":
+      price.textContent = "390000";
+      break;
+    case "blue":
+      price.textContent = "375000";
+      break;
+    case "pink":
+      price.textContent = "425000";
+      break;
+  }
 });
 
 function formatPrice(num) {
-  const str = num.toString();
+  typeof num === "number" ? (str = num.toString()) : (str = num);
   let newStr = "";
   let count = 0;
   let i = 0;

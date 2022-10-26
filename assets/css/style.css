@@ -1,10 +1,20 @@
+body {
+  background-color: #c9e4ca;
+}
+
 main {
+  margin-top: 6rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+
+  /* height: 100vh; */
 }
 
 .product-item {
   padding: 1rem;
+  background-color: #55828b;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .product-item div {
@@ -13,12 +23,27 @@ main {
   gap: 10px;
 }
 
+.product-img {
+  width: 350px;
+}
+
 .pricing-section {
-  margin-top: 2rem;
-  padding: 1rem;
+  padding: 4rem 2rem;
+  background-color: #87bba2;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.color-section {
+  display: flex;
+  justify-content: flex-start;
 }
 
 #color-circle {
+  margin-left: 10px;
+  background-color: red;
+  display: inline-block;
+  border: solid 2px #55828b;
   border-radius: 50%;
   height: 25px;
   width: 25px;

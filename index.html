@@ -11,19 +11,25 @@
   <body>
     <main>
       <section class="product-item">
-        <img src="" alt="" />
-        <h1>Item</h1>
+        <img src="assets/img/Notebook.png" alt="" class="product-img" />
+        <h1>NOTEBOOK ASUS L510</h1>
         <div>
           <input type="text" placeholder="Cantidad" name="" id="quantity" />
-          <input type="text" placeholder="Color" name="" id="chosenColor" />
+          <!-- <input type="text" placeholder="Color" name="" id="chosenColor" /> -->
+          <select name="" id="selectColor">
+            <option value="red">Rojo</option>
+            <option value="black">Negro</option>
+            <option value="blue">Azul</option>
+            <option value="pink">Rosado</option>
+          </select>
         </div>
-        <h2>Precio: <span id="price">400000</span></h2>
+        <h2>Precio unitario: $<span id="price">399990</span></h2>
         <button id="button">Calcular Total</button>
       </section>
       <section class="pricing-section">
         <h2>Total: $<span id="totalPrice">0</span></h2>
-        <h2>Cantidad: <span id="quantityToBuy"></span></h2>
-        <h2>
+        <h2>Cantidad: <span id="quantityToBuy">0</span></h2>
+        <h2 class="color-section">
           Color:
           <div id="color-circle"></div>
         </h2>
