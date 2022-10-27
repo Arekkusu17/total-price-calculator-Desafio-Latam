@@ -4,36 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/normalize.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Total Price</title>
   </head>
   <body>
     <main>
-      <section class="product-item">
-        <img src="assets/img/Notebook.png" alt="" class="product-img" />
-        <h1>NOTEBOOK ASUS L510</h1>
-        <div>
-          <input type="number" placeholder="Ingresa la cantidad" name="" id="quantity" />
-          <!-- <input type="text" placeholder="Color" name="" id="chosenColor" /> -->
-          <select name="" id="selectColor">
-            <option value="red">Rojo</option>
-            <option value="black">Negro</option>
-            <option value="blue">Azul</option>
-            <option value="pink">Rosado</option>
-          </select>
-        </div>
-        <h2>Precio unitario: $<span id="price">399990</span></h2>
-        <button id="button">Calcular Total</button>
-      </section>
-      <section class="pricing-section">
-        <h2>Total: $<span id="totalPrice">0</span></h2>
-        <h2>Cantidad: <span id="quantityToBuy">0</span></h2>
-        <h2 class="color-section">
-          Color:
-          <div id="color-circle"></div>
-        </h2>
-      </section>
+      <div class="container">
+        <section class="product-item">
+          <img src="assets/img/Notebook.png" alt="" class="product-img" />
+          <h1 class="product-name">NOTEBOOK ASUS L510</h1>
+          <div>
+            <input
+              type="text"
+              inputmode="numeric"
+              placeholder="Ingresa la cantidad"
+              name=""
+              id="quantity"
+            />
+            <!-- <input type="text" placeholder="Color" name="" id="chosenColor" /> -->
+            <select name="" id="selectColor">
+              <option value="red">Rojo</option>
+              <option value="black">Negro</option>
+              <option value="blue">Azul</option>
+              <option value="pink">Rosado</option>
+            </select>
+          </div>
+          <h2>Precio unitario: $<span id="price">399990</span></h2>
+          <div class="btn-container">
+            <button id="button">Calcular Total</button>
+          </div>
+        </section>
+        <section class="pricing-section">
+          <h2>Total: $<span id="totalPrice">0</span></h2>
+          <h2>Cantidad: <span id="quantityToBuy">0</span></h2>
+          <h2 class="color-section">
+            Color:
+            <div id="color-circle"></div>
+          </h2>
+        </section>
+      </div>
     </main>
     <script src="script.js"></script>
   </body>

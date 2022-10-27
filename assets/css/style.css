@@ -1,39 +1,76 @@
 body {
   background-color: #c9e4ca;
+  font-family: "Quicksand", sans-serif;
+  height: 100vh;
 }
 
 main {
-  margin-top: 6rem;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+}
 
-  /* height: 100vh; */
+.container {
+  display: flex;
+  overflow: hidden;
+  margin-top: 6rem;
+  box-shadow: 0 1rem 5rem 11px rgba(255, 255, 255, 0.874);
+  border-radius: 15px;
 }
 
 .product-item {
   padding: 1rem;
   background-color: #55828b;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  color: #ffffff;
 }
 
 .product-item div {
   display: flex;
   flex-direction: column;
+
   gap: 10px;
 }
 
 .product-img {
-  width: 350px;
+  max-width: 350px;
+}
+
+input,
+select {
+  height: 2rem;
+  border-radius: 8px;
+  border: 2px solid #3b6064;
 }
 
 .pricing-section {
+  overflow: hidden;
   padding: 4rem 2rem;
   background-color: #87bba2;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 
+.btn-container {
+  text-align: center;
+}
+
+button {
+  margin: auto;
+  height: 30px;
+  padding: 0 1rem;
+  background-color: #5cad5f;
+  color: #ffffff;
+  border: 1px solid #87bba2;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+
+button:focus {
+  background: #87bba2;
+  transform: scale(1);
+}
+button:hover {
+  transform: scale(0.95);
+}
 .color-section {
   display: flex;
   justify-content: flex-start;
@@ -47,4 +84,32 @@ main {
   border-radius: 50%;
   height: 25px;
   width: 25px;
+}
+
+/* MOBILE LAYOUT */
+
+@media screen and (max-width: 640px) {
+  .container {
+    margin: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    border-radius: 15px;
+    box-shadow: 0 1rem 5rem 11px rgba(8, 8, 8, 0.874);
+  }
+
+  .product-item {
+    padding: 1rem;
+    border-bottom-left-radius: 0;
+  }
+
+  .pricing-section {
+    padding: 2rem;
+    border-top-right-radius: 0;
+  }
+
+  .product-img {
+    max-width: 100%;
+  }
 }
